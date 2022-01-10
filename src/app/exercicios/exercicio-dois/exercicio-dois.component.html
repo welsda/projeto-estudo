@@ -1,0 +1,12 @@
+<section>
+  <h2 [ngClass]="{'maior-idade border': idade >= 18, 'menor-idade': idade < 18}">
+    <!-- Objeto com string e booleano -->
+    {{idade}}
+  </h2>
+  <!-- <h2 [class.maior-idade]="idade >= 18">{{idade}}</h2> -->
+  <p *ngIf="idade >= 18">Maior de idade</p>
+  <p *ngIf="idade < 18">Menor de idade</p>
+  <!-- Diretiva estrutural = estrutura lógica de programação na tag -->
+  <button (click)="aumentar()">Aumentar</button>
+  <button (click)="diminuir()">Diminuir</button>
+</section>
