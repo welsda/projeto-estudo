@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ExemplosModule } from './exemplos/exemplos.module';
-import { ExerciciosModule } from './exercicios/exercicios.module';
+
 
 @NgModule({
   declarations: [
@@ -13,8 +13,7 @@ import { ExerciciosModule } from './exercicios/exercicios.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ExemplosModule,
-    ExerciciosModule
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

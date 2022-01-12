@@ -1,0 +1,38 @@
+<table mat-table [dataSource]="listaPacientes" class="mat-elevation-z8 demo-table">
+
+  <ng-container matColumnDef="_idPaciente">
+    <th mat-header-cell *matHeaderCellDef>No.</th>
+    <td mat-cell *matCellDef="let pacientes">{{pacientes._idPaciente}}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="nomePaciente">
+    <th mat-header-cell *matHeaderCellDef>Nome</th>
+    <td mat-cell *matCellDef="let pacientes">{{pacientes.nomePaciente}}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="nascimentoPaciente">
+    <th mat-header-cell *matHeaderCellDef>Nascimento</th>
+    <td mat-cell *matCellDef="let pacientes">{{pacientes.nascimentoPaciente}}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="rgPaciente">
+    <th mat-header-cell *matHeaderCellDef>RG</th>
+    <td mat-cell *matCellDef="let pacientes">{{pacientes.rgPaciente}}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="cpfPaciente">
+    <th mat-header-cell *matHeaderCellDef>CPF</th>
+    <td mat-cell *matCellDef="let pacientes">{{pacientes.cpfPaciente}}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="acoes">
+    <th mat-header-cell *matHeaderCellDef>Ações</th>
+    <td mat-cell *matCellDef="let pacientes">{{pacientes.acoes}}<button (click)="deletar()">Deletar</button></td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="visaoColunas"></tr>
+  <tr mat-row *matRowDef="let row; columns: visaoColunas;"></tr>
+</table>
+
+<button (click)="deletar()">Deletar</button>
+
