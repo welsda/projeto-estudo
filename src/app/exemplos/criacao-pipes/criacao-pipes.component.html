@@ -1,15 +1,27 @@
-<input
+<section>
+  <!-- filtro de palavras no array -->
+  <input
   type="text"
   placeholder="Buscar Linguagem"
   [(ngModel)]="query"
-/>
-<!-- <p>{{ linguagens | filter:"C" }}</p> -->
-<!-- DESAFIO: Pode buscar P e p e retorna Python normalmente. -->
-<!-- DICA: Mudar apenas a lógica do retorno. -->
-
-<ul>
-  <li *ngFor="let lang of linguagens | filter: query">{{ lang }}</li>
-</ul>
-<hr/>
-<h3 *ngFor="let num of numeros | inc">{{ num }}</h3>
-<button (click)="add()">Adicionar</button>
+  />
+  <!-- <p>{{ linguagens | filter:"C" }}</p> -->
+  <!-- DESAFIO: Pode buscar P e p e retorna Python normalmente. -->
+  <!-- DICA: Mudar apenas a lógica do retorno. -->
+  <ul>
+    <li *ngFor="let lang of linguagens | filter: query">{{ lang }}</li>
+  </ul>
+</section>
+  <hr/>
+<section>
+  <!-- inc número add no array -->
+  <h3 *ngFor="let num of numeros | inc">{{ num }}</h3>
+  <button (click)="add()">Adicionar</button>
+</section>
+  <hr/>
+<section>
+  <!-- esconder email -->
+  <p>{{ "jose.almir@soulcodeacademy.org" | obfsEmail }}</p>
+  <input type="text" [(ngModel)]="valor"/>
+  <p>{{ valor | obfsEmail }}</p>
+</section>

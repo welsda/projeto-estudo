@@ -1,0 +1,5 @@
+<textarea [(ngModel)]="values"></textarea>
+<button (click)="enviar()">Sortear</button>
+
+<p *ngIf="sorteado">{{ sorteado }}</p>
+<!-- se houver texto no sorteado, vai mostrar parágrafo -->

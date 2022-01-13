@@ -15,6 +15,7 @@ export class CriacaoPipesComponent implements OnInit {
   }
 
   query = '';
+  valor = '';
 
   linguagens = [
     'Python',

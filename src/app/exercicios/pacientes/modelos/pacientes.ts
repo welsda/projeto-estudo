@@ -1,6 +1,6 @@
 export interface Pacientes {
   nomePaciente: string;
-  nascimentoPaciente: string;
+  nascimentoPaciente: Date;
   rgPaciente: string;
   cpfPaciente: string;
 }
